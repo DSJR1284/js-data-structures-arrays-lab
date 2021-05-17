@@ -19,5 +19,17 @@ const destructivelyRemoveFirstDriver = function(name) {
 }
 
 const appendDriver = function(name) {
-    drivers.concat(name)
+    return [...drivers, name];
+}
+
+const prependDriver = function(name) {
+    return [name, ...drivers];
+}
+
+const removeLastDriver = function() {
+   return drivers.slice(0, drivers.length -1);
+}
+
+const removeFirstDriver = function() {
+    return drivers.slice(1);
 }
